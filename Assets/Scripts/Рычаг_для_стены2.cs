@@ -27,9 +27,9 @@ public class Рычаг_для_стены2 : MonoBehaviour
         }
 
         if (Рычаг_для_стены.flag3)
-            Стена3.transform.position += new Vector3(0, 20f, 0);
+            Стена3.transform.position += new Vector3(0, 5, 0);
         else
-            Стена3.transform.position += new Vector3(0, -20f, 0);
+            Стена3.transform.position += new Vector3(0, -5f, 0);
     }
 }
 

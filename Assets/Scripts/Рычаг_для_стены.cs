@@ -32,12 +32,12 @@ public class Рычаг_для_стены : MonoBehaviour
         }
 
         if (flag1)
-            Стена1.transform.position += new Vector3(0, 20f, 0);
+            Стена1.transform.position += new Vector3(0, 5f, 0);
         else
-            Стена1.transform.position += new Vector3(0, -20f, 0);
+            Стена1.transform.position += new Vector3(0, -5f, 0);
         if (flag3)
-            Стена3.transform.position += new Vector3(0, 20f, 0);
+            Стена3.transform.position += new Vector3(0, 5f, 0);
         else
-            Стена3.transform.position += new Vector3(0, -20f, 0);
+            Стена3.transform.position += new Vector3(0, -5f, 0);
     }
 }

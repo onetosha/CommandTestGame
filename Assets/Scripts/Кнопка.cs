@@ -19,7 +19,7 @@ public class Кнопка : MonoBehaviour
                 timeDown = 0;
             if (timeDown == 0)
             {
-                gameObject.transform.position += new Vector3(0, 0.5f, 0);
+                gameObject.transform.position += new Vector3(0, 0.2f, 0);
                 b_active = false;
             }
         }
@@ -29,7 +29,7 @@ public class Кнопка : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) && b_active == false)
         {
-            gameObject.transform.position -= new Vector3(0, 0.5f, 0);
+            gameObject.transform.position -= new Vector3(0, 0.2f, 0);
             timeDown = timer;
             b_active = true;
             flag = 1; 

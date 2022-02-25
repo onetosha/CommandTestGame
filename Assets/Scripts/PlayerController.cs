@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody _rigidbody;
-    public float speed = 20f;
-    public float rotationSpeed = 20f;
+    public float speed = 5.7f;
+    public float rotationSpeed = 5.7f;
     private Animator _animator;
 
 

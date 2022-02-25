@@ -56,15 +56,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Lever.cs" />
-    <Compile Include="Assets\Player_Move.cs" />
-    <Compile Include="Assets\Player_MouseMove.cs" />
-    <Compile Include="Assets\Кнопка.cs" />
-    <Compile Include="Assets\Рычаг_для_стены.cs" />
-    <Compile Include="Assets\Рычаг_для_стены1.cs" />
-    <Compile Include="Assets\Телега.cs" />
-    <Compile Include="Assets\СоздательШариков.cs" />
-    <Compile Include="Assets\Рычаг_для_стены2.cs" />
+    <Compile Include="Assets\Scripts\Lever.cs" />
+    <Compile Include="Assets\Scripts\Кнопка.cs" />
+    <Compile Include="Assets\Scripts\PlayerCameraControls.cs" />
+    <Compile Include="Assets\Scripts\Рычаг_для_стены.cs" />
+    <Compile Include="Assets\Scripts\Рычаг_для_стены1.cs" />
+    <Compile Include="Assets\Scripts\Телега.cs" />
+    <Compile Include="Assets\Scripts\СоздательШариков.cs" />
+    <Compile Include="Assets\Scripts\Рычаг_для_стены2.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
