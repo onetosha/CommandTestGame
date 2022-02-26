@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _rigidbody;
     public float speed = 5.7f;
     public float rotationSpeed = 5.7f;
+    public float jumpForce = 5f;
+    public Transform gcTransform;
+    public LayerMask gLayer;
     private Animator _animator;
 
 
@@ -26,7 +29,30 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(directionVector), Time.deltaTime * rotationSpeed);
 
         _animator.SetFloat("changingSpeed", Vector3.ClampMagnitude(directionVector, 1).magnitude);
+        Vector3 moveDir = Vector3.ClampMagnitude(directionVector, 1) * speed;
+        _rigidbody.velocity = new Vector3(moveDir.x, _rigidbody.velocity.y, moveDir.z);
+        _rigidbody.angularVelocity = Vector3.zero;
 
-        _rigidbody.velocity = Vector3.ClampMagnitude(directionVector, 1) * speed;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+
+        if (Physics.CheckSphere(gcTransform.position, 0.2f, gLayer))
+        {
+            _animator.SetBool("inAir", false);
+        }
+        else
+        {
+            _animator.SetBool("inAir", true);
+        }
+    }
+
+    void Jump()
+    {
+        if (Physics.CheckSphere(gcTransform.position, 0.4f, gLayer))
+        {
+            _rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 }

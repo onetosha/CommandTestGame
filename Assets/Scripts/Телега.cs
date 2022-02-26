@@ -5,7 +5,7 @@ using UnityEngine;
 public class Телега : MonoBehaviour
 {
     private Rigidbody car;
-    public static float speedMultiplier = 0f;
+    public static float speedMultiplier = 5f;
     
     private void Start()
     {
@@ -14,6 +14,6 @@ public class Телега : MonoBehaviour
 
     private void FixedUpdate()
     {
-        car.AddRelativeForce(Vector3.forward * speedMultiplier);
+        car.AddRelativeForce(Vector3.forward * speedMultiplier, ForceMode.Acceleration);
     }
 }
