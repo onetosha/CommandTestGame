@@ -7,29 +7,34 @@ public class Рычаг_для_стены2 : MonoBehaviour
     public GameObject Стена3;
     public GameObject lever;
 
+    public LayerMask playerLayer;
+
     public static bool state = true;
-    
-    
-    private void OnMouseDown()
+
+
+    private void Update()
     {
-        state = !state;
-
-        if (state)
+        if (Input.GetKeyDown(KeyCode.E) && Physics.CheckSphere(lever.transform.position, 1f, playerLayer))
         {
-            lever.transform.eulerAngles = new Vector3(0, 0, 315f);
-            Рычаг_для_стены.flag3 = !Рычаг_для_стены.flag3;
-        }
+            state = !state;
 
-        else
-        {
-            lever.transform.eulerAngles = new Vector3(0, 0, 45f);
-            Рычаг_для_стены.flag3 = !Рычаг_для_стены.flag3;
-        }
+            if (state)
+            {
+                lever.transform.eulerAngles = new Vector3(0, 0, 315f);
+                Рычаг_для_стены.flag3 = !Рычаг_для_стены.flag3;
+            }
 
-        if (Рычаг_для_стены.flag3)
-            Стена3.transform.position += new Vector3(0, 5, 0);
-        else
-            Стена3.transform.position += new Vector3(0, -5f, 0);
+            else
+            {
+                lever.transform.eulerAngles = new Vector3(0, 0, 45f);
+                Рычаг_для_стены.flag3 = !Рычаг_для_стены.flag3;
+            }
+
+            if (Рычаг_для_стены.flag3)
+                Стена3.transform.position += new Vector3(0, 5, 0);
+            else
+                Стена3.transform.position += new Vector3(0, -5f, 0);
+        }
     }
 }
 

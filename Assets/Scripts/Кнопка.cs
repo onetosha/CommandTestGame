@@ -9,8 +9,16 @@ public class Кнопка : MonoBehaviour
     private float timeDown = 1;
     public static int flag = 0;
     public static bool b_active = false;
+    public LayerMask playerLayer;
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && b_active == false && Physics.CheckSphere(button.transform.position, 2f, playerLayer))
+        {
+            gameObject.transform.position -= new Vector3(0, 0.2f, 0);
+            timeDown = timer;
+            b_active = true;
+            flag = 1;
+        }
         if (b_active)
         {
             if (timeDown > 0)
@@ -24,16 +32,4 @@ public class Кнопка : MonoBehaviour
             }
         }
     }
-
-    public void OnMouseDown()
-    {
-        if(Input.GetMouseButtonDown(0) && b_active == false)
-        {
-            gameObject.transform.position -= new Vector3(0, 0.2f, 0);
-            timeDown = timer;
-            b_active = true;
-            flag = 1; 
-        }
-    }
-
 }

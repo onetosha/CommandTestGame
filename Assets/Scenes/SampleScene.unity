@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 15536756}
   - component: {fileID: 15536755}
   - component: {fileID: 15536754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u041A\u043D\u043E\u043F\u043A\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,8 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7ec42cbada5d24390897bfbb7ca661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  button: {fileID: 15536753}
   timer: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!65 &15536755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -228,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15536753}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.673056, y: -0.9778448, z: -54.37983}
+  m_LocalPosition: {x: -8.673056, y: -0.9778448, z: -60.47}
   m_LocalScale: {x: 1.4498, y: 1, z: 1.7884}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1114,6 +1117,9 @@ MonoBehaviour:
   "\u0421\u0442\u0435\u043D\u04302": {fileID: 757155363}
   "\u0421\u0442\u0435\u043D\u04303": {fileID: 765752429}
   lever: {fileID: 666980067}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!65 &666980069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1725,6 +1731,9 @@ MonoBehaviour:
   "\u0421\u0442\u0435\u043D\u04301": {fileID: 649397089}
   "\u0421\u0442\u0435\u043D\u04303": {fileID: 765752429}
   lever: {fileID: 813594788}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!65 &813594790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1874,6 +1883,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "\u0421\u0442\u0435\u043D\u04303": {fileID: 765752429}
   lever: {fileID: 878621270}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!65 &878621272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2571,28 +2583,14 @@ GameObject:
   - component: {fileID: 1320525936}
   - component: {fileID: 1320525935}
   - component: {fileID: 1320525934}
-  - component: {fileID: 1320525933}
-  m_Layer: 0
+  - component: {fileID: 1320525938}
+  m_Layer: 8
   m_Name: "\u0420\u044B\u0447\u0430\u0433"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1320525933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320525932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4d65c0834fcb2b4da6dec8515a788f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  car: {fileID: 0}
-  lever: {fileID: 1320525932}
 --- !u!65 &1320525934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2664,13 +2662,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320525932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.783055, y: -1.2378447, z: -49.910927}
+  m_LocalPosition: {x: -8.783055, y: -0.54, z: -42}
   m_LocalScale: {x: 1, y: 10.862693, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 839501428}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320525938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320525932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d65c0834fcb2b4da6dec8515a788f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lever: {fileID: 1320525932}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1393878449 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 230e59917dbc32f4ca7602093ccc198c, type: 3}

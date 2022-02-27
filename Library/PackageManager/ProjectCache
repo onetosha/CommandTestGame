@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637814166838416201
+      ticks: 637814791815853015
     m_Hash: 3695373609
   m_LockFileStatus:
     m_FilePath: D:/UnityProjects/CommandTestGame/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637814166838416201
+      ticks: 637814791815863096
     m_Hash: 3216982591
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -3067,10 +3067,12 @@ m_ResolvedPackages:
     - 2.0.0
     - 2.0.1-preview.1
     - 2.0.2
+    - 3.0.1
     compatible:
     - 2.0.0
     - 2.0.1-preview.1
     - 2.0.2
+    - 3.0.1
     verified: 2.0.2
   dependencies: []
   resolvedDependencies: []
@@ -3127,6 +3129,7 @@ m_ResolvedPackages:
     - 1.1.0-pre.11
     - 1.1.0-pre.41
     - 1.1.0-pre.69
+    - 1.2.0
     compatible:
     - 1.0.1
     - 1.1.0-pre.7
@@ -3136,6 +3139,7 @@ m_ResolvedPackages:
     - 1.1.0-pre.11
     - 1.1.0-pre.41
     - 1.1.0-pre.69
+    - 1.2.0
     verified: 1.0.1
   dependencies:
   - name: com.unity.modules.unitywebrequest
